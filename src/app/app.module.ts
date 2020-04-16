@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, SimpleHttpComponent, SearchResultComponent ],
   bootstrap:    [ AppComponent ]
 })
