@@ -7,10 +7,12 @@ import { HelloComponent } from './hello.component';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { YoutubeSearchServiceService } from './youtube-search-service.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, SimpleHttpComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [YoutubeSearchServiceService]
 })
 export class AppModule { }
