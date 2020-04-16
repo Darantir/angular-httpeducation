@@ -2,7 +2,7 @@ import {
 YouTubeSearchService,
  YOUTUBE_API_KEY,
  YOUTUBE_API_URL
- } from './youtube-search.service';
+ } from './youtube-search-service.service';
 
  export const youTubeSearchInjectables: Array<any> = [
  {provide: YouTubeSearchService, useClass: YouTubeSearchService},
