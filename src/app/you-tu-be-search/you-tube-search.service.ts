@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { SearchResult} from './search-result.model';
 import {Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
+import 'rxjs/add/operator/map';
 export const YOUTUBE_API_KEY = "XXX_YOUR_KEY_HERE_XXX";
 export const YOUTUBE_API_URL: string = "https://www.googleapis.com/youtube/v3/search";
 
