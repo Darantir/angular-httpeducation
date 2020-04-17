@@ -1,4 +1,5 @@
-import { Component, OnInit,Input,Output } from '@angular/core';
+import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
+import { SearchResult} from '../you-tu-be-search/search-result.model';
 
 
 @Component({
@@ -7,7 +8,8 @@ import { Component, OnInit,Input,Output } from '@angular/core';
   styleUrls: ['./search-box.component.css']
 })
 export class SearchBoxComponent implements OnInit {
-
+  @Output() loading: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() results: EventEmitter<SearchResult[]> = new EventEmitter<SearchResult[]>();
   constructor() { }
 
   ngOnInit() {
