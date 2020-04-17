@@ -1,5 +1,7 @@
-import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
+import { Component, OnInit,Input,Output, EventEmitter, ElementRef } from '@angular/core';
 import { SearchResult} from './src/app/you-tu-be-search/search-result.model';
+import { YouTubeSearchService } from '../you-tube-search.service';
+import {Observable} from 'rxjs'
 
 
 @Component({
@@ -10,9 +12,11 @@ import { SearchResult} from './src/app/you-tu-be-search/search-result.model';
 export class SearchBoxComponent implements OnInit {
   @Output() loading: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() results: EventEmitter<SearchResult[]> = new EventEmitter<SearchResult[]>();
-  constructor() { }
+  constructor(private youtube: YouTubeSearchService,
+  private el: ElementRef) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    Observable.fromEvent(this.el.nativeElement, 'keyup')
   }
 
 }
