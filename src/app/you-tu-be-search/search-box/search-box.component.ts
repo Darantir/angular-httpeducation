@@ -1,5 +1,5 @@
 import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
-import { SearchResult} from '../you-tu-be-search/search-result.model';
+import { SearchResult} from './src/app/you-tu-be-search/search-result.model';
 
 
 @Component({
